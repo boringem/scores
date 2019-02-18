@@ -28,7 +28,7 @@ window.onload = function () {
         var highScore = 0;
         var show = "The test scores:\n";
 
-        //first use a do-while loop to get scores from user
+        //a do-while loop to get scores from user
         do {
             entry = prompt("Enter test score\n" +
                            "Or enter 999 to end entries", 999);
@@ -42,7 +42,7 @@ window.onload = function () {
         }
         while (entry != 999); 
 
-        //next use a for loop to process the scores
+        //a for loop to process the scores
         for (var i = 0; i < scores.length; i++) {
             total = total + scores[i];       //both are numbers so adds
             show = show + scores[i] + "\n";  //strings & numbers so concatenates
@@ -51,16 +51,8 @@ window.onload = function () {
                 highScore = score;
             }
         }
-        //find the highest score
-        //for(var j = 0; j < scores.length; j++){
-           // var score = scores[j];
-           // if(score > highScore){
-            //    highScore = score;
-                
-           // }
-        // }
 
-        //then calculate the average and display
+        //calculate the average and display
         average = parseInt(total/scores.length);
         alert(show + "\nAverage score is " + average + "\nHigh score is " + highScore);
     var main = $("#main");
